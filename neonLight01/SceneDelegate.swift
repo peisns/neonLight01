@@ -17,6 +17,34 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
+        
+        let calendarVC = CalendarViewController()
+        let diaryVC = UINavigationController(rootViewController: DiaryViewController())
+        let dataVC = DataViewController()
+        
+        let tabBarController = UITabBarController()
+        tabBarController.setViewControllers([calendarVC, diaryVC, dataVC], animated: true)
+        
+        if let items = tabBarController.tabBar.items {
+            items[0].title = "Calendar"
+            items[0].image = UIImage(systemName: "calendar.circle")
+            items[0].selectedImage = UIImage(systemName: "calendar.circle.fill")
+            
+            items[1].title = "Diary"
+            items[1].image = UIImage(systemName: "pencil.circle")
+            items[1].selectedImage = UIImage(systemName: "pencil.circle.fill")
+            
+            items[2].title = "Data"
+            items[2].image = UIImage(systemName: "square.and.arrow.down.on.square")
+            items[2].selectedImage = UIImage(systemName: "square.and.arrow.down.on.square.fill")
+        }
+        
+        UITabBar.appearance().backgroundColor = .black // 배경
+        UITabBar.appearance().tintColor = .white // 선택됐을 때 색
+        UITabBar.appearance().unselectedItemTintColor = .systemGray
+        
+        window?.rootViewController = tabBarController
+        window?.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
