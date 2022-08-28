@@ -52,6 +52,6 @@ class DiaryViewController: UIViewController {
 
     @objc func pushToWriteV() {
         let vc = WriteViewController()
-        navigationController?.pushViewController(vc, animated: true)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
