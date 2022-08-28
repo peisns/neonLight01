@@ -38,10 +38,25 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             items[2].image = UIImage(systemName: "square.and.arrow.down.on.square")
             items[2].selectedImage = UIImage(systemName: "square.and.arrow.down.on.square.fill")
         }
+
+        // appearance code
+        let appearance = UITabBarAppearance()
+        appearance.configureWithDefaultBackground()
+        appearance.stackedLayoutAppearance.normal.iconColor = .systemGray
+        appearance.stackedLayoutAppearance.normal.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.systemGray]
         
-        UITabBar.appearance().backgroundColor = .black // 배경
-        UITabBar.appearance().tintColor = .white // 선택됐을 때 색
-        UITabBar.appearance().unselectedItemTintColor = .systemGray
+        appearance.stackedLayoutAppearance.selected.iconColor = .white
+        appearance.stackedLayoutAppearance.selected.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        appearance.backgroundColor = .black
+        appearance.backgroundEffect = UIBlurEffect(style: .systemUltraThinMaterial)
+        
+        UITabBar.appearance().standardAppearance = appearance
+        UITabBar.appearance().scrollEdgeAppearance = appearance
+
+        //tabBar Top border
+        let lineView = UIView(frame: CGRect(x: 0, y: 0, width:tabBarController.tabBar.frame.size.width, height: 1))
+        lineView.backgroundColor = UIColor.systemGray
+        tabBarController.tabBar.addSubview(lineView)
         
         window?.rootViewController = tabBarController
         window?.makeKeyAndVisible()

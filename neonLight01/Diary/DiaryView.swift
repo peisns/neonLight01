@@ -7,7 +7,12 @@
 
 import UIKit
 
-class DiaryView: UIView {
+class DiaryView: BaseView {
+    let tableView: UITableView = {
+        let view = UITableView()
+        view.backgroundColor = .black
+        return view
+    }()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -19,11 +24,33 @@ class DiaryView: UIView {
         super.init(coder: coder)
     }
     
-    func configure() {
-        backgroundColor = .white
+    override func configure() {
+        self.addSubview(tableView)
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(DiaryTableViewCell.self, forCellReuseIdentifier: DiaryTableViewCell.reuseIdentifier)
     }
     
-    func setConstraints() {
+    override func setConstraints() {
+        tableView.snp.makeConstraints { make in
+            make.edges.equalTo(self.safeAreaLayoutGuide)
+        }
         
     }
+}
+
+extension DiaryView: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: DiaryTableViewCell.reuseIdentifier, for: indexPath)
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UIScreen.main.bounds.width
+    }
+    
 }

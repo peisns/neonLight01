@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3500E45C28B99F7800DCEDAA /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3500E45B28B99F7800DCEDAA /* TabBarController.swift */; };
 		3500E45E28B9A0B400DCEDAA /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3500E45D28B9A0B400DCEDAA /* CalendarViewController.swift */; };
 		3500E46228B9A36100DCEDAA /* DiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3500E46128B9A36100DCEDAA /* DiaryViewController.swift */; };
 		3500E46428B9A3A200DCEDAA /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3500E46328B9A3A200DCEDAA /* DataViewController.swift */; };
@@ -16,6 +15,16 @@
 		3500E46B28BA541100DCEDAA /* DiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3500E46A28BA541100DCEDAA /* DiaryView.swift */; };
 		3500E46D28BA5AA200DCEDAA /* WriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3500E46C28BA5AA200DCEDAA /* WriteViewController.swift */; };
 		3500E46F28BA5AAE00DCEDAA /* WriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3500E46E28BA5AAE00DCEDAA /* WriteView.swift */; };
+		351CB33E28BA69F900E11A0D /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351CB33D28BA69F900E11A0D /* TabBarController.swift */; };
+		351CB34128BA6AF300E11A0D /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 351CB34028BA6AF300E11A0D /* SnapKit */; };
+		351CB34328BA6B6800E11A0D /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351CB34228BA6B6800E11A0D /* BaseView.swift */; };
+		351CB34528BA6C5900E11A0D /* DiaryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351CB34428BA6C5900E11A0D /* DiaryTableViewCell.swift */; };
+		351CB34728BA715F00E11A0D /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351CB34628BA715F00E11A0D /* BaseTableViewCell.swift */; };
+		351CB34A28BA71E800E11A0D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351CB34928BA71E800E11A0D /* BaseViewController.swift */; };
+		351CB34C28BA746800E11A0D /* BaseLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351CB34B28BA746800E11A0D /* BaseLabel.swift */; };
+		351CB34F28BA762400E11A0D /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 351CB34E28BA762400E11A0D /* Then */; };
+		351CB35128BB3DAC00E11A0D /* BaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351CB35028BB3DAC00E11A0D /* BaseButton.swift */; };
+		351CB35428BB49E900E11A0D /* DiaryPhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351CB35328BB49E800E11A0D /* DiaryPhotoCollectionViewCell.swift */; };
 		35FF376A28750AB800238889 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FF376928750AB800238889 /* AppDelegate.swift */; };
 		35FF376C28750AB800238889 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FF376B28750AB800238889 /* SceneDelegate.swift */; };
 		35FF376E28750AB800238889 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FF376D28750AB800238889 /* ViewController.swift */; };
@@ -25,7 +34,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3500E45B28B99F7800DCEDAA /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		3500E45D28B9A0B400DCEDAA /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		3500E46128B9A36100DCEDAA /* DiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryViewController.swift; sourceTree = "<group>"; };
 		3500E46328B9A3A200DCEDAA /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
@@ -34,6 +42,14 @@
 		3500E46A28BA541100DCEDAA /* DiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryView.swift; sourceTree = "<group>"; };
 		3500E46C28BA5AA200DCEDAA /* WriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteViewController.swift; sourceTree = "<group>"; };
 		3500E46E28BA5AAE00DCEDAA /* WriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteView.swift; sourceTree = "<group>"; };
+		351CB33D28BA69F900E11A0D /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		351CB34228BA6B6800E11A0D /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		351CB34428BA6C5900E11A0D /* DiaryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryTableViewCell.swift; sourceTree = "<group>"; };
+		351CB34628BA715F00E11A0D /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		351CB34928BA71E800E11A0D /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		351CB34B28BA746800E11A0D /* BaseLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseLabel.swift; sourceTree = "<group>"; };
+		351CB35028BB3DAC00E11A0D /* BaseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseButton.swift; sourceTree = "<group>"; };
+		351CB35328BB49E800E11A0D /* DiaryPhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryPhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		35FF376628750AB800238889 /* neonLight01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = neonLight01.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35FF376928750AB800238889 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35FF376B28750AB800238889 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +65,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				351CB34128BA6AF300E11A0D /* SnapKit in Frameworks */,
+				351CB34F28BA762400E11A0D /* Then in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,10 +78,40 @@
 			children = (
 				3500E46128B9A36100DCEDAA /* DiaryViewController.swift */,
 				3500E46A28BA541100DCEDAA /* DiaryView.swift */,
+				351CB34428BA6C5900E11A0D /* DiaryTableViewCell.swift */,
+				351CB35328BB49E800E11A0D /* DiaryPhotoCollectionViewCell.swift */,
+				3500E47028BA608500DCEDAA /* Write */,
+			);
+			path = Diary;
+			sourceTree = "<group>";
+		};
+		3500E47028BA608500DCEDAA /* Write */ = {
+			isa = PBXGroup;
+			children = (
 				3500E46C28BA5AA200DCEDAA /* WriteViewController.swift */,
 				3500E46E28BA5AAE00DCEDAA /* WriteView.swift */,
 			);
-			path = Diary;
+			path = Write;
+			sourceTree = "<group>";
+		};
+		351CB34828BA71D700E11A0D /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				351CB34228BA6B6800E11A0D /* BaseView.swift */,
+				351CB34B28BA746800E11A0D /* BaseLabel.swift */,
+				351CB34628BA715F00E11A0D /* BaseTableViewCell.swift */,
+				351CB35028BB3DAC00E11A0D /* BaseButton.swift */,
+				351CB34928BA71E800E11A0D /* BaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		351CB35228BB3E1F00E11A0D /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				3500E45D28B9A0B400DCEDAA /* CalendarViewController.swift */,
+			);
+			path = Calendar;
 			sourceTree = "<group>";
 		};
 		35FF375D28750AB800238889 = {
@@ -86,8 +134,10 @@
 			isa = PBXGroup;
 			children = (
 				3500E46528B9A56F00DCEDAA /* UIViewController+Extension.swift */,
-				3500E45B28B99F7800DCEDAA /* TabBarController.swift */,
-				3500E45D28B9A0B400DCEDAA /* CalendarViewController.swift */,
+				3500E46728BA459500DCEDAA /* ReusableProtocol.swift */,
+				351CB34828BA71D700E11A0D /* Base */,
+				351CB33D28BA69F900E11A0D /* TabBarController.swift */,
+				351CB35228BB3E1F00E11A0D /* Calendar */,
 				3500E46928BA53F500DCEDAA /* Diary */,
 				3500E46328B9A3A200DCEDAA /* DataViewController.swift */,
 				35FF376D28750AB800238889 /* ViewController.swift */,
@@ -97,7 +147,6 @@
 				35FF377228750ABD00238889 /* Assets.xcassets */,
 				35FF377428750ABD00238889 /* LaunchScreen.storyboard */,
 				35FF377728750ABD00238889 /* Info.plist */,
-				3500E46728BA459500DCEDAA /* ReusableProtocol.swift */,
 			);
 			path = neonLight01;
 			sourceTree = "<group>";
@@ -118,6 +167,10 @@
 			dependencies = (
 			);
 			name = neonLight01;
+			packageProductDependencies = (
+				351CB34028BA6AF300E11A0D /* SnapKit */,
+				351CB34E28BA762400E11A0D /* Then */,
+			);
 			productName = neonLight01;
 			productReference = 35FF376628750AB800238889 /* neonLight01.app */;
 			productType = "com.apple.product-type.application";
@@ -146,6 +199,10 @@
 				Base,
 			);
 			mainGroup = 35FF375D28750AB800238889;
+			packageReferences = (
+				351CB33F28BA6AF300E11A0D /* XCRemoteSwiftPackageReference "SnapKit" */,
+				351CB34D28BA762400E11A0D /* XCRemoteSwiftPackageReference "Then" */,
+			);
 			productRefGroup = 35FF376728750AB800238889 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -174,16 +231,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				3500E46B28BA541100DCEDAA /* DiaryView.swift in Sources */,
+				351CB34328BA6B6800E11A0D /* BaseView.swift in Sources */,
+				351CB35428BB49E900E11A0D /* DiaryPhotoCollectionViewCell.swift in Sources */,
 				3500E46D28BA5AA200DCEDAA /* WriteViewController.swift in Sources */,
 				3500E46628B9A56F00DCEDAA /* UIViewController+Extension.swift in Sources */,
+				351CB35128BB3DAC00E11A0D /* BaseButton.swift in Sources */,
 				3500E45E28B9A0B400DCEDAA /* CalendarViewController.swift in Sources */,
 				3500E46428B9A3A200DCEDAA /* DataViewController.swift in Sources */,
-				3500E45C28B99F7800DCEDAA /* TabBarController.swift in Sources */,
+				351CB34C28BA746800E11A0D /* BaseLabel.swift in Sources */,
 				3500E46228B9A36100DCEDAA /* DiaryViewController.swift in Sources */,
+				351CB34528BA6C5900E11A0D /* DiaryTableViewCell.swift in Sources */,
 				35FF376E28750AB800238889 /* ViewController.swift in Sources */,
 				3500E46F28BA5AAE00DCEDAA /* WriteView.swift in Sources */,
 				35FF376A28750AB800238889 /* AppDelegate.swift in Sources */,
+				351CB33E28BA69F900E11A0D /* TabBarController.swift in Sources */,
 				35FF376C28750AB800238889 /* SceneDelegate.swift in Sources */,
+				351CB34A28BA71E800E11A0D /* BaseViewController.swift in Sources */,
+				351CB34728BA715F00E11A0D /* BaseTableViewCell.swift in Sources */,
 				3500E46828BA459500DCEDAA /* ReusableProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -331,6 +395,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BG68R7N92W;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = neonLight01/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -361,6 +426,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BG68R7N92W;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = neonLight01/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -406,6 +472,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		351CB33F28BA6AF300E11A0D /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		351CB34D28BA762400E11A0D /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		351CB34028BA6AF300E11A0D /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 351CB33F28BA6AF300E11A0D /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		351CB34E28BA762400E11A0D /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 351CB34D28BA762400E11A0D /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 35FF375E28750AB800238889 /* Project object */;
 }
