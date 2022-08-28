@@ -134,8 +134,7 @@ class DiaryTableViewCell: BaseTableViewCell {
         contents.snp.makeConstraints { make in
             make.leading.trailing.equalTo(cellView).inset(basicMargin)
             make.top.equalTo(titleLabel.snp.bottom).offset(basicMargin)
-            make.bottom.equalTo(photoCollectionView.snp.top).offset(-basicMargin)
-            
+            make.bottom.lessThanOrEqualTo(photoCollectionView.snp.top)
         }
     }
     

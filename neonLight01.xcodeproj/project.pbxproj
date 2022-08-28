@@ -15,6 +15,8 @@
 		3500E46B28BA541100DCEDAA /* DiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3500E46A28BA541100DCEDAA /* DiaryView.swift */; };
 		3500E46D28BA5AA200DCEDAA /* WriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3500E46C28BA5AA200DCEDAA /* WriteViewController.swift */; };
 		3500E46F28BA5AAE00DCEDAA /* WriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3500E46E28BA5AAE00DCEDAA /* WriteView.swift */; };
+		35127D0D28BB6A1D00D5EBC4 /* BaseTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35127D0C28BB6A1D00D5EBC4 /* BaseTextField.swift */; };
+		35127D1028BB6F3700D5EBC4 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 35127D0F28BB6F3700D5EBC4 /* IQKeyboardManagerSwift */; };
 		351CB33E28BA69F900E11A0D /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351CB33D28BA69F900E11A0D /* TabBarController.swift */; };
 		351CB34128BA6AF300E11A0D /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 351CB34028BA6AF300E11A0D /* SnapKit */; };
 		351CB34328BA6B6800E11A0D /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351CB34228BA6B6800E11A0D /* BaseView.swift */; };
@@ -42,6 +44,7 @@
 		3500E46A28BA541100DCEDAA /* DiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryView.swift; sourceTree = "<group>"; };
 		3500E46C28BA5AA200DCEDAA /* WriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteViewController.swift; sourceTree = "<group>"; };
 		3500E46E28BA5AAE00DCEDAA /* WriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteView.swift; sourceTree = "<group>"; };
+		35127D0C28BB6A1D00D5EBC4 /* BaseTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTextField.swift; sourceTree = "<group>"; };
 		351CB33D28BA69F900E11A0D /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		351CB34228BA6B6800E11A0D /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		351CB34428BA6C5900E11A0D /* DiaryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryTableViewCell.swift; sourceTree = "<group>"; };
@@ -67,6 +70,7 @@
 			files = (
 				351CB34128BA6AF300E11A0D /* SnapKit in Frameworks */,
 				351CB34F28BA762400E11A0D /* Then in Frameworks */,
+				35127D1028BB6F3700D5EBC4 /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +106,7 @@
 				351CB34628BA715F00E11A0D /* BaseTableViewCell.swift */,
 				351CB35028BB3DAC00E11A0D /* BaseButton.swift */,
 				351CB34928BA71E800E11A0D /* BaseViewController.swift */,
+				35127D0C28BB6A1D00D5EBC4 /* BaseTextField.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -170,6 +175,7 @@
 			packageProductDependencies = (
 				351CB34028BA6AF300E11A0D /* SnapKit */,
 				351CB34E28BA762400E11A0D /* Then */,
+				35127D0F28BB6F3700D5EBC4 /* IQKeyboardManagerSwift */,
 			);
 			productName = neonLight01;
 			productReference = 35FF376628750AB800238889 /* neonLight01.app */;
@@ -202,6 +208,7 @@
 			packageReferences = (
 				351CB33F28BA6AF300E11A0D /* XCRemoteSwiftPackageReference "SnapKit" */,
 				351CB34D28BA762400E11A0D /* XCRemoteSwiftPackageReference "Then" */,
+				35127D0E28BB6F3700D5EBC4 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 			);
 			productRefGroup = 35FF376728750AB800238889 /* Products */;
 			projectDirPath = "";
@@ -232,6 +239,7 @@
 			files = (
 				3500E46B28BA541100DCEDAA /* DiaryView.swift in Sources */,
 				351CB34328BA6B6800E11A0D /* BaseView.swift in Sources */,
+				35127D0D28BB6A1D00D5EBC4 /* BaseTextField.swift in Sources */,
 				351CB35428BB49E900E11A0D /* DiaryPhotoCollectionViewCell.swift in Sources */,
 				3500E46D28BA5AA200DCEDAA /* WriteViewController.swift in Sources */,
 				3500E46628B9A56F00DCEDAA /* UIViewController+Extension.swift in Sources */,
@@ -474,6 +482,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		35127D0E28BB6F3700D5EBC4 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.5.0;
+			};
+		};
 		351CB33F28BA6AF300E11A0D /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
@@ -493,6 +509,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		35127D0F28BB6F3700D5EBC4 /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 35127D0E28BB6F3700D5EBC4 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
 		351CB34028BA6AF300E11A0D /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 351CB33F28BA6AF300E11A0D /* XCRemoteSwiftPackageReference "SnapKit" */;
