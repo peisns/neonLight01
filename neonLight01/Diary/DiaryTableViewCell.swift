@@ -20,7 +20,7 @@ class DiaryTableViewCell: BaseTableViewCell {
         $0.text = "88년 12월 28일"
         $0.font = .boldSystemFont(ofSize: 16)
     }
-
+    
     let titleLabel = BaseLabel().then {
         $0.text = "여기는 일기 제목이 들어가는 곳"
         $0.numberOfLines = 1
@@ -48,7 +48,7 @@ class DiaryTableViewCell: BaseTableViewCell {
         layout.minimumInteritemSpacing = 16 // spacing between cell's column
         layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0) // between cells and another view
         layout.scrollDirection = .horizontal
-        layout.estimatedItemSize = CGSize(width: 100, height: 200)
+        layout.estimatedItemSize = CGSize(width: 150, height: 100)
         var view = UICollectionView(frame: .zero, collectionViewLayout: layout)
         view.backgroundColor = .black
         return view
@@ -128,7 +128,7 @@ class DiaryTableViewCell: BaseTableViewCell {
         photoCollectionView.snp.makeConstraints { make in
             make.leading.bottom.equalTo(cellView).inset(basicMargin)
             make.trailing.equalTo(bookmarkButton.snp.leading)
-            make.height.equalTo(cellView.snp.height).multipliedBy(0.3)
+//            make.height.equalTo(cellView.snp.height).multipliedBy(0.3)
         }
         
         contents.snp.makeConstraints { make in
@@ -137,6 +137,7 @@ class DiaryTableViewCell: BaseTableViewCell {
             make.bottom.equalTo(photoCollectionView.snp.top).offset(-basicMargin)
             
         }
+
     }
     
 }
@@ -148,7 +149,7 @@ extension DiaryTableViewCell: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DiaryPhotoCollectionViewCell.reuseIdentifier, for: indexPath) as? DiaryPhotoCollectionViewCell else { return UICollectionViewCell()}
-        cell.backgroundColor = .blue
+        
         return cell
     }
 }
