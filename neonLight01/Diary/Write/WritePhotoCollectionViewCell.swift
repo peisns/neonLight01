@@ -1,5 +1,5 @@
 //
-//  BaseView.swift
+//  WritePhotoCollectionViewCell.swift
 //  neonLight01
 //
 //  Created by Brother Model on 2022/08/28.
@@ -7,27 +7,18 @@
 
 import UIKit
 
-import SnapKit
-import Then
-import RealmSwift
+class WritePhotoCollectionViewCell: UICollectionViewCell {
 
-class BaseView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
-        configure()
-        setConstraints()
+        setConfigure()
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
     
-    func configure() {
+    func setConfigure() {
+        self.backgroundColor = .red
     }
-    
-    func setConstraints() {
-        
-    }
-
-
 }

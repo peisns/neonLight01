@@ -13,6 +13,7 @@ class WriteViewController: UIViewController {
     
     override func loadView() {
         self.view = mainView
+        mainView.vc = self
     }
     
     override func viewDidLoad() {

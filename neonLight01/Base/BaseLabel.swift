@@ -20,7 +20,8 @@ class BaseLabel: UILabel {
     }
     
     func configure() {
-        self.textColor = .white
+        self.textColor = .systemGray6
+        self.font = .boldSystemFont(ofSize: 20)
     }
     
 }

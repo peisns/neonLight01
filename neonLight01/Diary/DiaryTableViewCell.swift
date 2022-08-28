@@ -48,7 +48,7 @@ class DiaryTableViewCell: BaseTableViewCell {
         layout.minimumInteritemSpacing = 16 // spacing between cell's column
         layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0) // between cells and another view
         layout.scrollDirection = .horizontal
-        layout.estimatedItemSize = CGSize(width: 100, height: 200)
+        layout.estimatedItemSize = CGSize(width: 50, height: 80)
         var view = UICollectionView(frame: .zero, collectionViewLayout: layout)
         view.backgroundColor = .black
         return view
@@ -128,7 +128,7 @@ class DiaryTableViewCell: BaseTableViewCell {
         photoCollectionView.snp.makeConstraints { make in
             make.leading.bottom.equalTo(cellView).inset(basicMargin)
             make.trailing.equalTo(bookmarkButton.snp.leading)
-            make.height.equalTo(cellView.snp.height).multipliedBy(0.3)
+            make.height.height.equalTo(cellView.snp.height).multipliedBy(0.3)
         }
         
         contents.snp.makeConstraints { make in
