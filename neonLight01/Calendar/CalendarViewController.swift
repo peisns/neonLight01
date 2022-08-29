@@ -9,12 +9,23 @@ import UIKit
 
 class CalendarViewController: UIViewController {
 
+    let mainView = CalendarView()
+    
+    override func loadView() {
+        self.view = mainView
+        mainView.vc = self
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .black
+        configure()
+    }
+    
+    func configure() {
         tabBarItem.title = "Calendar"
 
-        
     }
+
+    
 }

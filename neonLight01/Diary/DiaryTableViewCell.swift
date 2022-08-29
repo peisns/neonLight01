@@ -50,7 +50,7 @@ class DiaryTableViewCell: BaseTableViewCell {
         layout.scrollDirection = .horizontal
         layout.estimatedItemSize = CGSize(width: 50, height: 80)
         var view = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        view.backgroundColor = .black
+        view.backgroundColor = .systemGray
         return view
     }()
     
@@ -114,7 +114,7 @@ class DiaryTableViewCell: BaseTableViewCell {
         }
         
         likeButton.snp.makeConstraints { make in
-            make.width.height.equalTo(44)
+            make.width.height.equalTo(32)
             make.trailing.bottom.equalTo(cellView).inset(basicMargin)
         }
         
@@ -127,8 +127,8 @@ class DiaryTableViewCell: BaseTableViewCell {
         
         photoCollectionView.snp.makeConstraints { make in
             make.leading.bottom.equalTo(cellView).inset(basicMargin)
-            make.trailing.equalTo(bookmarkButton.snp.leading)
-            make.height.height.equalTo(cellView.snp.height).multipliedBy(0.3)
+            make.trailing.equalTo(bookmarkButton.snp.leading).offset(-basicMargin)
+            make.height.height.equalTo(cellView.snp.height).multipliedBy(0.4)
         }
         
         contents.snp.makeConstraints { make in
@@ -137,7 +137,6 @@ class DiaryTableViewCell: BaseTableViewCell {
             make.bottom.lessThanOrEqualTo(photoCollectionView.snp.top)
         }
     }
-    
 }
 
 extension DiaryTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -147,7 +146,6 @@ extension DiaryTableViewCell: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DiaryPhotoCollectionViewCell.reuseIdentifier, for: indexPath) as? DiaryPhotoCollectionViewCell else { return UICollectionViewCell()}
-        cell.backgroundColor = .blue
         return cell
     }
 }

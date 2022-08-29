@@ -14,11 +14,15 @@ class WriteView: BaseView {
     
     let mainScrollView = UIScrollView().then {
         $0.backgroundColor = .black
-        $0.showsVerticalScrollIndicator = true
     }
     
+    // Frame Layout Guide 는 scroll View 객체 자체의 크기를 의미
+    // content layout guide는 안에 들어가는 컨텐츠의 크기
+    // uicollectionviewdelegateFlowlayout 프로토콜 추가
+    // size for item at
+    
     let mainView = BaseView().then {
-        $0.backgroundColor = .blue
+        $0.backgroundColor = .systemGray
     }
     
     let dateView = BaseView().then { _ in }
@@ -136,8 +140,9 @@ class WriteView: BaseView {
         }
         
         mainView.snp.makeConstraints { make in
-            make.edges.equalTo(self.safeAreaLayoutGuide)
+            make.edges.equalTo(mainScrollView)
             make.width.equalTo(self.safeAreaLayoutGuide)
+            make.height.equalTo(self.safeAreaLayoutGuide).offset(200)
         }
         
         dateView.snp.makeConstraints { make in
@@ -193,7 +198,7 @@ class WriteView: BaseView {
         
         saveButton.snp.makeConstraints { make in
             make.leading.trailing.equalTo(mainView).inset(basicMargin)
-            make.top.equalTo(photoCollectionView.snp.bottom).offset(basicMargin * 20)
+            make.top.equalTo(photoCollectionView.snp.bottom).offset(basicMargin * 2)
             make.height.equalTo(44)
         }
     }
