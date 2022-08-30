@@ -50,7 +50,7 @@ class DiaryTableViewCell: BaseTableViewCell {
         layout.scrollDirection = .horizontal
         layout.estimatedItemSize = CGSize(width: 50, height: 80)
         var view = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        view.backgroundColor = .systemGray
+        view.backgroundColor = .black
         return view
     }()
     
@@ -128,7 +128,7 @@ class DiaryTableViewCell: BaseTableViewCell {
         photoCollectionView.snp.makeConstraints { make in
             make.leading.bottom.equalTo(cellView).inset(basicMargin)
             make.trailing.equalTo(bookmarkButton.snp.leading).offset(-basicMargin)
-            make.height.height.equalTo(cellView.snp.height).multipliedBy(0.4)
+            make.height.equalTo(100)
         }
         
         contents.snp.makeConstraints { make in

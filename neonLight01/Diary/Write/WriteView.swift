@@ -12,6 +12,12 @@ class WriteView: BaseView {
     
     var vc = UIViewController()
     
+    var selectedPhotoArray = Array<UIImage>() {
+        didSet {
+            self.photoCollectionView.reloadData()
+        }
+    }
+    
     let mainScrollView = UIScrollView().then {
         $0.backgroundColor = .black
     }
@@ -22,7 +28,7 @@ class WriteView: BaseView {
     // size for item at
     
     let mainView = BaseView().then {
-        $0.backgroundColor = .systemGray
+        $0.backgroundColor = .black
     }
     
     let dateView = BaseView().then { _ in }
@@ -55,7 +61,7 @@ class WriteView: BaseView {
         $0.layer.cornerRadius = 5
         $0.backgroundColor = .systemGray6
     }
-        
+    
     let selectPhotoBtn = BaseButton().then {
         $0.setImage(UIImage(systemName: "plus"), for: .normal)
         $0.layer.borderColor = UIColor.systemGray6.cgColor
@@ -66,10 +72,10 @@ class WriteView: BaseView {
     let photoCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.minimumLineSpacing = 16 // spacing between cell's row
-        layout.minimumInteritemSpacing = 16 // spacing between cell's column
+        layout.minimumInteritemSpacing = 0 // spacing between cell's column
         layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0) // between cells and another view
         layout.scrollDirection = .horizontal
-        layout.estimatedItemSize = CGSize(width: 100, height: 140)
+        layout.itemSize = CGSize(width: 150, height: 150)
         var view = UICollectionView(frame: .zero, collectionViewLayout: layout)
         view.backgroundColor = .black
         return view
@@ -77,8 +83,8 @@ class WriteView: BaseView {
     
     let photoPicker: PHPickerViewController = {
         var configuration = PHPickerConfiguration()
-        configuration.selectionLimit = 1
         configuration.filter = .images
+        configuration.selectionLimit = 5
         let picker = PHPickerViewController(configuration: configuration)
         return picker
     }()
@@ -110,7 +116,7 @@ class WriteView: BaseView {
         
         [dateLabel, datePicker].forEach {dateView.addSubview($0)}
         [dateView, titleLabel, titleTextField, contentsLabel, contentsTextView, selectPhotoBtn, photoCollectionView, saveButton].forEach {mainView.addSubview($0)}
-                
+        
         photoCollectionView.delegate = self
         photoCollectionView.dataSource = self
         photoCollectionView.register(WritePhotoCollectionViewCell.self, forCellWithReuseIdentifier: WritePhotoCollectionViewCell.reuseIdentifier)
@@ -128,7 +134,10 @@ class WriteView: BaseView {
     
     @objc func saveButtonClicked() {
         
+        vc.navigationController?.popViewController(animated: true)
     }
+    
+    func createDiary
     
     override func setConstraints() {
         super.setConstraints()
@@ -206,18 +215,40 @@ class WriteView: BaseView {
 
 extension WriteView: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return selectedPhotoArray.count
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: WritePhotoCollectionViewCell.reuseIdentifier, for: indexPath) as? WritePhotoCollectionViewCell else { return UICollectionViewCell() }
-        cell.backgroundColor = .white
+        cell.photo.image = selectedPhotoArray[indexPath.item]
+        
         return cell
     }
 }
 
 extension WriteView: PHPickerViewControllerDelegate {
     func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
+        self.selectedPhotoArray = []
+        for result in results {
+            let item = result.itemProvider
+            print("item", item)
+            if item.canLoadObject(ofClass: UIImage.self) {
+                item.loadObject(ofClass: UIImage.self) { image, error in
+                    DispatchQueue.main.sync {
+                        if let image = image as? UIImage {
+                            print("image = image")
+                            self.selectedPhotoArray.append(image)
+                            print("selection image")
+                            print(image)
+                        } else {
+                            print(error)
+                        }
+                    }
+                }
+            }
+        }
+        print(self.selectedPhotoArray)
+        print(self.selectedPhotoArray.count)
         picker.dismiss(animated: true, completion: nil)
-        print(results)
+        
     }
 }

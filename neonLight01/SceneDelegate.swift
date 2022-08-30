@@ -57,6 +57,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let lineView = UIView(frame: CGRect(x: 0, y: 0, width:tabBarController.tabBar.frame.size.width, height: 1))
         lineView.backgroundColor = UIColor.systemGray
         tabBarController.tabBar.addSubview(lineView)
+        tabBarController.selectedIndex = 1
         
         window?.rootViewController = tabBarController
         window?.makeKeyAndVisible()
